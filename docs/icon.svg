@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="720" viewBox="0 0 480 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b2c8c"/><stop offset="1" stop-color="#0fb5a5"/></linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="132" width="456" height="456" rx="104" fill="url(#bg)"/>
+  <rect x="12" y="132" width="456" height="456" rx="104" fill="url(#shine)"/>
+  <rect x="12" y="132" width="456" height="456" rx="104" fill="none" stroke="#000000" stroke-opacity="0.35" stroke-width="10"/>
+  <svg x="40" y="160" width="400" height="400" viewBox="-60 -1020 1080 1080">
+    <path d="M201-120q-50 0-85-35t-35-85q0-50 35-85t85-35h560q50 0 85 35t35 85q0 50-35 85t-85 35H201Zm0-60h560q25.5 0 42.75-17.25T821-240q0-25.5-17.25-42.75T761-300H201q-25.5 0-42.75 17.25T141-240q0 25.5 17.25 42.75T201-180Zm190-260q-12.75 0-21.37-8.63Q361-457.25 361-470v-340q0-12.75 8.63-21.38Q378.25-840 391-840h340q12.75 0 21.38 8.62Q761-822.75 761-810v340q0 12.75-8.62 21.37Q743.75-440 731-440H391Zm-282-90q-12.63 0-21.32-8.5Q79-547 79-560t8.5-21.5Q96-590 109-590h161q12.63 0 21.32 8.68Q300-572.63 300-560q0 13-8.68 21.5-8.69 8.5-21.32 8.5H109Zm401-120h102q13.08 0 21.54-8.68 8.46-8.67 8.46-21.5 0-12.82-8.46-21.32T612-710H510q-13.08 0-21.54 8.45-8.46 8.44-8.46 21.5 0 13.05 8.63 21.55 8.62 8.5 21.37 8.5Zm-319 0q-13.08 0-21.54-8.68-8.46-8.67-8.46-21.5 0-12.82 8.63-21.32 8.62-8.5 21.37-8.5h87q13.08 0 21.54 8.45 8.46 8.44 8.46 21.5 0 13.05-8.46 21.55T278-650h-87Z" fill="#ffffff" stroke="#1b1030" stroke-width="44" stroke-linejoin="round" paint-order="stroke"/>
+  </svg>
+</svg>
