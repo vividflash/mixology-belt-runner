@@ -26,8 +26,8 @@ Want faster xp? Use this plugin.
 I gotta admit, I'm a big fan of those 'braindead' style plugins. You know the ones, where you can switch
 your brain off entirely and just click exactly where it tells you to? I'm only human. This plugin does
 that. It highlights practically every click you need to make: which levers to pull and in what order,
-which station to use next, when to hit the conveyor belt and when to go grab digweed. *It also tracks your
-inventory, so it knows what potions you've got*, which station each one went through, what you've
+which station to use next, when to hit the conveyor belt and when to go grab digweed. **It also tracks your
+inventory, so it knows what potions you've got**, which station each one went through, what you've
 used and what you've put digweed on.
 
 It also stops a few of the classic mistakes. Wrong lever, wrong station, or clicking the belt when
