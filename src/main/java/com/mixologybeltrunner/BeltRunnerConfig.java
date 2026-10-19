@@ -155,6 +155,6 @@ public interface BeltRunnerConfig extends Config
 	)
 	default Color digweedColour()
 	{
-		return new Color(0xce93d8);
+		return new Color(0x39ff14);
 	}
 }

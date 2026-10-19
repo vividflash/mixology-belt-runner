@@ -22,7 +22,6 @@ public class GuideOverlay extends OverlayPanel
 	private static final Color FINISHED = new Color(0x4caf50);
 	private static final Color UNPROCESSED = new Color(0xffd54f);
 	private static final Color MISSING = new Color(0x9e9e9e);
-	private static final Color DIGWEED = new Color(0xb388ff);
 	private static final Color STATUS = new Color(0xbdbdbd);
 	private static final int WIDTH = 200;
 	private static final int COLUMN_WIDTH = 36;
@@ -180,7 +179,7 @@ public class GuideOverlay extends OverlayPanel
 			for (Station station : Station.PROCESS_ORDER)
 			{
 				boolean digweed = row.digweed(station);
-				line.cell(glyph(row.state(station), digweed), digweed ? DIGWEED : stateColour(row.state(station)), columnCentre(station));
+				line.cell(glyph(row.state(station), digweed), digweed ? config.digweedColour() : stateColour(row.state(station)), columnCentre(station));
 			}
 			panelComponent.getChildren().add(line);
 		}

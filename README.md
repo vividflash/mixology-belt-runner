@@ -5,6 +5,8 @@ builds on the "Prioritise experience per hour" strategy on the
 [OSRS Wiki](https://oldschool.runescape.wiki/w/Mastering_Mixology/Strategies#Prioritise_experience_per_hour),
 then tweaks it using a load of simulated hours based on my recorded playing.
 
+![Restocking at the levers](docs/screenshots/restock.png)
+
 # A note for those new to the minigame
 
 If you're under level 81, or you've not got all the Mastering Mixology rewards yet, I don't recommend
@@ -111,6 +113,20 @@ guessed 89k xp/h and I actually got 88k, so close enough.
 
 If you want the full writeup, I asked my buddy Claude to put it all together, and you can read all about it inside the github repo, it's in the docs folder. It's got more tables than I know what to do with, so good luck
 with that. You'll need it. The Python simulator is in there too, if you fancy running it yourself.
+
+# Screenshots
+
+Running the potions through the stations, with the next station already marked.
+
+![Brewing at the stations](docs/screenshots/brewing.png)
+
+Off to grab digweed, with the path drawn on the floor.
+
+![Picking up digweed](docs/screenshots/weedpick.png)
+
+Then straight onto a Mixalot.
+
+![Using digweed on a Mixalot](docs/screenshots/weeduse.png)
 
 # Credits
 
