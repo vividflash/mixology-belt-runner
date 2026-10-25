@@ -16,27 +16,29 @@ import org.junit.Test;
 public class LeverGuardTest
 {
 	@Test
-	public void onlyTheNextLeverIsAllowed()
+	public void anyOwedLeverIsAllowed()
 	{
 		Map<PotionComponent, java.util.List<Integer>> mal = Vessel.pullNumbers(MIXALOT, new int[]{0, 0, 0});
 		assertFalse(ClickGuard.blockLever(mal, false, MOX));
-		assertTrue(ClickGuard.blockLever(mal, false, AGA));
-		assertTrue(ClickGuard.blockLever(mal, false, LYE));
-		Map<PotionComponent, java.util.List<Integer>> afterMox = Vessel.pullNumbers(MIXALOT, Vessel.pushed(new int[]{0, 0, 0}, MOX));
-		assertFalse(ClickGuard.blockLever(afterMox, false, AGA));
-		assertTrue(ClickGuard.blockLever(afterMox, false, MOX));
+		assertFalse(ClickGuard.blockLever(mal, false, AGA));
+		assertFalse(ClickGuard.blockLever(mal, false, LYE));
+		Map<PotionComponent, java.util.List<Integer>> afterLye = Vessel.pullNumbers(MIXALOT, Vessel.pushed(new int[]{0, 0, 0}, LYE));
+		assertFalse(ClickGuard.blockLever(afterLye, false, AGA));
+		assertFalse(ClickGuard.blockLever(afterLye, false, MOX));
+		assertTrue(ClickGuard.blockLever(afterLye, false, LYE));
 	}
 
 	@Test
-	public void mmaTakesMoxTwiceThenAga()
+	public void mmaTakesMoxTwiceAndAgaOnceInAnyOrder()
 	{
 		int[] slots = {0, 0, 0};
-		assertFalse(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, MOX));
-		slots = Vessel.pushed(slots, MOX);
-		assertFalse(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, MOX));
-		assertTrue(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, AGA));
+		assertFalse(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, AGA));
 		slots = Vessel.pushed(slots, MOX);
 		assertFalse(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, AGA));
+		slots = Vessel.pushed(slots, AGA);
+		assertTrue(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, AGA));
+		assertTrue(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, LYE));
+		assertFalse(ClickGuard.blockLever(Vessel.pullNumbers(MYSTIC_MANA_AMALGAM, slots), false, MOX));
 	}
 
 	@Test

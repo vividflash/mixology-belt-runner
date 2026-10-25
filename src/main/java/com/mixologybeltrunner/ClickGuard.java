@@ -19,8 +19,9 @@ public final class ClickGuard
 	}
 
 	/**
-	 * True for a lever pull that is not the next one the potion needs, and for any pull while
-	 * the finished potion waits in the vessel. No numbers and nothing waiting never blocks.
+	 * True for a lever pull the potion no longer needs, and for any pull while the finished
+	 * potion waits in the vessel. The owed pulls may come in any order: the vessel only checks
+	 * which three components it holds. No numbers and nothing waiting never blocks.
 	 */
 	public static boolean blockLever(java.util.Map<PotionComponent, java.util.List<Integer>> numbers,
 		boolean potionWaiting, PotionComponent clicked)
@@ -29,20 +30,7 @@ public final class ClickGuard
 		{
 			return true;
 		}
-		PotionComponent next = null;
-		int lowest = Integer.MAX_VALUE;
-		for (java.util.Map.Entry<PotionComponent, java.util.List<Integer>> e : numbers.entrySet())
-		{
-			for (int n : e.getValue())
-			{
-				if (n < lowest)
-				{
-					lowest = n;
-					next = e.getKey();
-				}
-			}
-		}
-		return next != null && clicked != next;
+		return !numbers.isEmpty() && !numbers.containsKey(clicked);
 	}
 
 	/**

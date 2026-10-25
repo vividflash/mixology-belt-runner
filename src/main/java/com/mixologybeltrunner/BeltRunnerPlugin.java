@@ -755,8 +755,8 @@ public class BeltRunnerPlugin extends Plugin
 	}
 
 	/**
-	 * Only the lever with the next pull number may be pulled while making a potion, counting
-	 * pulls already clicked this tick, and none while the finished potion waits to be taken.
+	 * Only levers the potion still needs may be pulled while making it, counting pulls already
+	 * clicked this tick, and none while the finished potion waits to be taken.
 	 */
 	private boolean blockLever(PotionComponent lever)
 	{
